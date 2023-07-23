@@ -28,9 +28,9 @@ namespace IndentStream_v1 {
         IndentStreamBuf* ids = dynamic_cast<IndentStreamBuf*>(os.rdbuf());
         if (ids != nullptr) {
             if (ids->indents > i) {
-                ids->indents -= ;
+                ids->indents -= i;
             } else {
-                ids->indets = 0;
+                ids->indents = 0;
             }
         }
         
