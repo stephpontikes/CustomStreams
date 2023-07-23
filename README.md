@@ -8,6 +8,8 @@ IndentStream is an ostream that is capable of handling a variable amount of inde
 line-beginning indentations by applying the `indent` ostream manipulator to an IndentStream. Similarly, one can decrease the 
 amount of indentations by applying the `unindent` manipulator.
 
+This was implemented as part of an assignment for MPCS51045: Advanced C++.
+
 ### ColorStream
 
 ColorStream is an ostream with manipulators that can change the color of text. There are two ways in which the user can
