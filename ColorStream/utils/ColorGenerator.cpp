@@ -60,13 +60,13 @@ void generateBoilerplateTop(IndentStream& ids) {
     ids << endl;
     ids << "using std::string;" << endl;
     ids << endl;
-    ids << "namespace ColorStream_v1 {" << indent << endl << endl;
-    ids << "struct Color {" << indent << endl;
+    ids << "namespace ColorStream_v1 {" << indent<2> << endl << endl;
+    ids << "struct Color {" << tabIndent << endl;
     ids << "string closeTag = \"\\033[0m\";" << endl << endl;
     ids << "template<typename T>" << endl;
-    ids << "static string color(string text) {" << indent << endl;
-    ids << "return T().openTag + text + T().closeTag;" << unindent << endl;
-    ids << "}" << unindent << endl;
+    ids << "static string color(string text) {" << tabIndent << endl;
+    ids << "return T().openTag + text + T().closeTag;" << tabUnindent << endl;
+    ids << "}" << tabUnindent << endl;
     ids << "};" << endl << endl;
 }
 
@@ -76,9 +76,9 @@ void generateBoilerplateBottom(IndentStream& ids) {
 }
 
 void generateSingleType(IndentStream& ids, string colorName, string ansiRGB) {
-    ids << "struct " << colorName << " : public Color {" << indent << endl;
+    ids << "struct " << colorName << " : public Color {" << tabIndent << endl;
     ids << colorName << "() : Color() {}" << endl;
-    ids << "const string openTag = \"\\x1B[38;2;" << ansiRGB << "m\";" << unindent << endl;
+    ids << "const string openTag = \"\\x1B[38;2;" << ansiRGB << "m\";" << tabUnindent << endl;
     ids << "};";
     ids << endl << endl;
 }
@@ -107,7 +107,7 @@ int main() {
         }
     }
 
-    ids << unindent;
+    ids << tabUnindent;
 
     generateBoilerplateBottom(ids);
 }

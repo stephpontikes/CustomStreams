@@ -20,7 +20,7 @@ namespace IndentStream_v1 {
 
         int_type overflow(int_type ch) override {
             if (!indented_flag) {
-                for (int i = 0; i < indents * 4; i++) {
+                for (int i = 0; i < indents; i++) {
                     b->sputc(' ');  
                 }
                 indented_flag = true;

@@ -18,6 +18,4 @@ int main() {
     cs << "The code generation is actually done using another type of stream that was implemented as a homework assignment for ";
     cs << "MPCS 51045: Advanced C++: an ostream capable of handling indentation. I hope you (the user) finds this project ";
     cs << "enjoyable and useful!" << std::endl;
-
-
 }

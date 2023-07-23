@@ -1,10 +1,9 @@
 #include <iostream>
-#include "../include/IndentStream.h"
+#include "../include/IndentStream.hpp"
 
 using namespace std;
 using namespace IndentStream_v1;
 
 int main() {
-    cout << "test indent" << indent << endl;
-    cout << "indent" << unindent << endl;
+    IndentStream ids(cout);
 }
